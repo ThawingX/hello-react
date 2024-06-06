@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
 import proptypes from "proptypes";
+import Son from "./components/Son";
 
 class App extends React.PureComponent {
   state = {
@@ -9,7 +10,16 @@ class App extends React.PureComponent {
 
   render() {
     return (
-      <div className="app">{this.state.isShowDiv1 ? <div>div1</div> : ""}</div>
+      <div>
+        <Son
+          propSlot={<div key={1}>propSlot</div>}
+          scopeSlot={(scope) => {
+            return <div key={2}>{scope}</div>;
+          }}
+        >
+          <div key={3}>children</div>
+        </Son>
+      </div>
     );
   }
 }
