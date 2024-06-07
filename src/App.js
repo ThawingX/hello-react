@@ -1,21 +1,24 @@
-import "./App.css";
-import React from "react";
 import Son from "./components/Son";
+import React, { useEffect } from "react";
+import { useContext, useRef } from "react";
 export const Context = React.createContext();
-class App extends React.PureComponent {
-  state = {};
-  render() {
-    return (
-      <div>
-        {/* 只能传递value作为值 */}
-        {/* 如果需要传递多个值，可以使用对象 */}
-        {/* 可以嵌套多个Context，但是不推荐 */}
-        <Context.Provider value={{ msg: "msg" }}>
-          <Son></Son>
-        </Context.Provider>
-      </div>
-    );
-  }
+function App() {
+  const h1Ref = useRef();
+  const onClick = () => {
+    console.log(h1Ref);
+  };
+  useEffect(() => {
+    console.log("Parent useEffect");
+    console.log(h1Ref);
+  }, []);
+  return (
+    <div>
+      <h1 ref={h1Ref}>Parent</h1>
+      <Context.Provider value="t22est">
+        <Son test="test"></Son>
+      </Context.Provider>
+      <button onClick={onClick}>Focus</button>
+    </div>
+  );
 }
-
 export default App;

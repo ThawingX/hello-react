@@ -1,19 +1,8 @@
-import React from "react";
+import { useContext } from "react";
 import { Context } from "../App";
 
-class Son extends React.PureComponent {
-  state = {};
-  render() {
-    return (
-      <div>
-        <Context.Consumer>
-          {({ msg }) => {
-            return <div>{msg}</div>;
-          }}
-        </Context.Consumer>
-      </div>
-    );
-  }
+function Son(props) {
+  const value = useContext(Context);
+  return <div>{value}</div>;
 }
-
 export default Son;
