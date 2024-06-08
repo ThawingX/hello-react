@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Context } from "../App";
+import { Context } from "../../App";
 
 function Son(props) {
   const value = useContext(Context);
