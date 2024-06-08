@@ -1,4 +1,4 @@
-import Son from "./components/Son";
+import Son from "../components/Son";
 import { useState, useEffect, useMemo } from "react";
 function App() {
   const [count, setCount] = useState(0);

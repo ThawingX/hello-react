@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import Son from "./components/Son";
+import Son from "../components/Son";
 export const Context = React.createContext();
 class App extends React.PureComponent {
   state = {};

@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import proptypes from "proptypes";
-import Son from "./components/Son";
+import Son from "../components/Son";
 
 class App extends React.PureComponent {
   state = {
