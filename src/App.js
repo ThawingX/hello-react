@@ -1,23 +1,24 @@
+import React from "react";
+import { Routes, Route ,NavLink,Link} from "react-router-dom";
 import Son from "./components/Son";
-import React, { useEffect } from "react";
-import { useContext, useRef } from "react";
-export const Context = React.createContext();
+import Home from "./components/Home";
 function App() {
-  const h1Ref = useRef();
-  const onClick = () => {
-    console.log(h1Ref);
-  };
-  useEffect(() => {
-    console.log("Parent useEffect");
-    console.log(h1Ref);
-  }, []);
   return (
     <div>
-      <h1 ref={h1Ref}>Parent</h1>
-      <Context.Provider value="t22est">
-        <Son test="test"></Son>
-      </Context.Provider>
-      <button onClick={onClick}>Focus</button>
+      <h1>menu</h1>
+      {/* navlink 会添加一个active类 */}
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/son">Son</NavLink>
+      <h1>menu2</h1>
+      {/* link 不会添加active类 */}
+      <Link to="/">Home</Link>
+      <Link to="/son">Son</Link>
+      <Routes>
+        {/* react-router-dom v6 */}
+        <Route path="/" element={<Home />} />
+        {/* react-router-dom v5 */}
+        <Route path="/son" Component={Son} />  
+      </Routes>
     </div>
   );
 }
