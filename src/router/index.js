@@ -26,6 +26,11 @@ const routes = [
     component: lazy(() => import("../challenges/easy_SubmitFormData")),
     name: "【Q5】【easy】FormData submit",
   },
+  {
+    path: "/q6",
+    component: lazy(() => import("../challenges/easy_maxCount")),
+    name: "【Q6】【easy】Max Count",
+  },
 ];
 
 export default routes;
