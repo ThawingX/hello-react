@@ -16,6 +16,11 @@ const routes = [
     component: lazy(() => import("../challenges/easy_todoList")),
     name: "【Q3】【easy】TODO List",
   },
+  {
+    path: "/q4",
+    component: lazy(() => import("../challenges/easy_progressBar")),
+    name: "【Q4】【easy】Progress Bar",
+  },
 ];
 
 export default routes;

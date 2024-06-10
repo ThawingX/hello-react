@@ -1,0 +1,12 @@
+.progress__wrap {
+  width: 400px;
+  height: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.progress {
+  background: red;
+  height: 100%;
+  /* 添加该属性后，进度条会有动画效果，并且可以异步更新进度条的渲染 */
+  transition: 1.5s ease 0.3s; 
+
+}
