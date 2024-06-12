@@ -34,7 +34,7 @@ const routes = [
   {
     path: "/q7",
     component: lazy(() => import("../challenges/medium_usePageBottom")),
-    name: "【Q7】【medium】use Page Bottom",
+    name: "【Q7】【medium】Use Page Bottom",
   },
 ];
 
