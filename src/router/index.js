@@ -9,7 +9,7 @@ const routes = [
   {
     path: "/q2",
     component: lazy(() => import("../challenges/easy_stopwatchOrTimer")),
-    name: "【Q2】【easy】Stopwatch/Timer",
+    name: "【Q2】【easy】Stopwatch Timer",
   },
   {
     path: "/q3",
